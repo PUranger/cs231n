@@ -1,0 +1,23 @@
+%%
+Guiming Chen
+11/27/2017
+Notes for python, pip, pipenv, and virtualenv installation.
+
+ref: http://docs.python-guide.org/en/latest/dev/virtualenvs/
+ref: https://www.cnblogs.com/chaosimple/p/4475958.html
+%%
+1. installed but fail to operate through cmd and git bash:
+    path problem. Go to "Advanced system settings" - "Environment Variables" and add the corresponding python, pip, or pipenv
+    path to the "path" with form:  "%pathofcertaintype%"
+
+2. virtualenv fail to activate:
+    (1) try to use cmd instead of git bash.
+    (2) follow the following coode:
+        > cd C:\Users\pc\Desktop\myfiles      %Before running this line, create a folder called "myfiles" on the Desktop. This line of                                                    code should change the directory to "myfiles".
+        > mkdir myproject                     %Create a folder called "myproject" in "myfiles", you can check if it exists before next
+        > cd myproject                        %Change working directory to myproject
+        > virtualenv env                      %Create a virtual environment called "env"
+        > env\Scripts\activate                %Activation
+        ...
+        > deactivate                          %Deactivation
+        
